@@ -3,51 +3,51 @@ import { Tab } from '@headlessui/react'
 
 const tabs = [
   {
-    name: 'Design',
+    name: 'Portrait',
     features: [
       {
-        name: 'Adaptive and modular',
+        name: 'Portrait photography',
         description:
-          'The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.',
+          'Portrait photography is a photography genre that captures the likeness, personality, and mood of a person or group of people. It can be done in a studio or on location, and can include traditional posed shots, candid shots, or a combination of both',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-01.jpg',
-        imageAlt: 'Maple organizer base with slots, supporting white polycarbonate trays of various sizes.',
+        imageAlt: 'Portrait photography',
       },
     ],
   },
   {
-    name: 'Material',
+    name: 'Landscape',
     features: [
       {
-        name: 'Natural wood options',
+        name: 'Landscape photography',
         description:
-          'Organize has options for rich walnut and bright maple base materials. Accent your desk with a contrasting material, or match similar woods for a calm and cohesive look. Every base is hand sanded and finished.',
+          'Landscape photography is capturing natural outdoor scenes, such as mountains, forests, beaches, rivers etc, with the aim of showing the beauty of nature.',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-02.jpg',
         imageAlt:
-          'Walnut organizer base with pen, sticky note, phone, and bin trays, next to modular drink coaster attachment.',
+          'Landscape photography',
       },
     ],
   },
   {
-    name: 'Considerations',
+    name: 'Fashion',
     features: [
       {
-        name: 'Helpful around the home',
+        name: 'Fashion photography',
         description:
-          "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
+          "Fashion photography is a genre that focuses on capturing clothing, accessories and models in an artistic and visually pleasing way, to showcase fashion trends and designs.",
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-03.jpg',
-        imageAlt: 'Walnut organizer base with white polycarbonate trays in the kitchen with various kitchen utensils.',
+        imageAlt: 'Fashion photography',
       },
     ],
   },
   {
-    name: 'Included',
+    name: 'Wedding',
     features: [
       {
-        name: "Everything you'll need",
+        name: "Wedding photography",
         description:
-          'The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.',
+          'Wedding photography is capturing special moments, emotions, and memories of a couple`s wedding day through various styles, traditional, candid, or photojournalistic.',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-04.jpg',
-        imageAlt: 'Walnut organizer system on black leather desk mat on top of white desk.',
+        imageAlt: 'Wedding photography',
       },
     ],
   },
@@ -60,29 +60,19 @@ function classNames(...classes) {
 export default function Tabs() {
   return (
     <div className="bg-white">
-      <section aria-labelledby="features-heading" className="mx-auto max-w-7xl pb-32 pt-16 sm:px-2 lg:px-8">
+      <section aria-labelledby="features-heading" className="mx-auto max-w-7xl pb-20 sm:px-2 lg:px-8">
         <div className="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
-          <div className="max-w-3xl">
-            <h2 id="features-heading" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Technical Specifications
-            </h2>
-            <p className="mt-4 text-gray-500">
-              The Organize modular system offers endless options for arranging your favorite and most used items. Keep
-              everything at reach and in its place, while dressing up your workspace.
-            </p>
-          </div>
-
-          <Tab.Group as="div" className="mt-4">
+          <Tab.Group as="div">
             <div className="-mx-4 flex overflow-x-auto sm:mx-0">
               <div className="flex-auto border-b border-gray-200 px-4 sm:px-0">
-                <Tab.List className="-mb-px flex space-x-10">
+                <Tab.List className="-mb-px flex space-x-10 justify-center">
                   {tabs.map((tab) => (
                     <Tab
                       key={tab.name}
                       className={({ selected }) =>
                         classNames(
                           selected
-                            ? 'border-indigo-500 text-indigo-600'
+                            ? 'border-black text-black'
                             : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
                           'whitespace-nowrap border-b-2 py-6 text-sm font-medium'
                         )
